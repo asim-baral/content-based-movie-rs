@@ -6,3 +6,4 @@ nltk
 python-multipart
 python-dotenv
 requests
+sentence-transformers

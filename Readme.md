@@ -1,9 +1,11 @@
 # Content-Based Movie Recommender System
 
-This project uses a content-based recommendation system built from TMDB datasets. It recommends similar movies based on Cast, Directors, Keywords, Genres, Release Decade and Overview.
+This project uses a content-based recommendation system built from TMDB datasets. It recommends similar movies based on Cast, Directors, Keywords, Genres, Release Decade and Overview, they are vectorized using 3 methods:
+1- Count Vectorizer
+2- TF-IDF
+3- Sentence Transformer
 
-![Screenshot](image.png)
-
+![alt text](image-1.png)
 
 ---
 
@@ -25,10 +27,11 @@ This project uses a content-based recommendation system built from TMDB datasets
 
 3. **Generate model files**
    - Open `Content_Based_Movie_Recommender.ipynb` in Jupyter Notebook or VS Code.
-   - Run all cells to process the data and generate the following files:
+   - Run all cells to process the data and generate the following files (Comment and Uncomment accordingly to generate different files):
      - `movies.pkl`
      - `similarityVector.pkl`
-     - `similarityVector2.pkl`
+     - `similarityVectorTFIDF.pkl`
+     - `similarityVectorTransformer.pkl`
 
 4. **Set up your TMDB API key**
    - Sign up at [TMDB](https://www.themoviedb.org/) and generate an API key.

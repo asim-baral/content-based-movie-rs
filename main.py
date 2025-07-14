@@ -14,7 +14,8 @@ TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 app = FastAPI()
 movies_list = pickle.load((open('movies.pkl', 'rb')))
 similarityVector = pickle.load((open('similarityVector.pkl', 'rb')))
-similarityVector2 = pickle.load((open('similarityVector2.pkl', 'rb')))
+similarityVectorTFIDF = pickle.load((open('similarityVectorTFIDF.pkl', 'rb')))
+similarityVectorTransformer = pickle.load((open('similarityVectorTransformer.pkl', 'rb')))
 
 
 # Allow frontend to access API
@@ -45,12 +46,15 @@ def recommend(recId:int,title: str):
     
     if recId==1:
         distances = list(enumerate(similarityVector[index]))
-    else:
-        distances = list(enumerate(similarityVector2[index]))
+    elif recId==2:
+        distances = list(enumerate(similarityVectorTFIDF[index]))
+    elif recId==3:
+        distances = list(enumerate(similarityVectorTransformer[index]))
+
 
     
     distances.sort(reverse=True, key=lambda x:x[1])
-    recommended = distances[1:15]
+    recommended = distances[0:15]
     
     recommendedIdTitle = []
     for i,l in recommended:

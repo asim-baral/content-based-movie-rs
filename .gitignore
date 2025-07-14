@@ -2,4 +2,6 @@ venv
 .env
 movies.pkl
 similarityVector.pkl
-similarityVector2.pkl
+similarityVectorTFIDF.pkl
+similarityVectorTransformer.pkl
+__pycache__

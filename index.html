@@ -16,14 +16,20 @@
     </div>
     
     <div class="container">
-        <div class="text">Based on Genres and Overview</div>
+        <div class="text">Using Count Vectorizer</div>
         <div id="recommendedMovies" class="recommendedMoviesC"></div>
     </div>
     
     <div class="container">
-        <div class="text">Based on Genres only</div>
+        <div class="text">Using TFIDF</div>
         <div id="recommendedMovies2" class="recommendedMoviesC"></div>
     </div>
+
+    <div class="container">
+        <div class="text">Using Sentence Transformer</div>
+        <div id="recommendedMovies3" class="recommendedMoviesC"></div>
+    </div>
+
 </body>
 </html>
 
@@ -76,6 +82,8 @@
     {
         setupRecommendation('recommendedMovies', `http://127.0.0.1:8000/recommend?recId=1&title=${input.value}`)
         setupRecommendation('recommendedMovies2', `http://127.0.0.1:8000/recommend?recId=2&title=${input.value}`)
+        setupRecommendation('recommendedMovies3', `http://127.0.0.1:8000/recommend?recId=3&title=${input.value}`)
+
     }
     
     input.addEventListener("input", function(){
