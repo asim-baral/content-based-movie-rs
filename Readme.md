@@ -11,8 +11,6 @@ This project uses a content-based recommendation system built from TMDB datasets
 
 ## Getting Started
 
-## Getting Started
-
 1. **Clone the repository**
    ```bash
    git clonehttps://github.com/asim-baral/content-based-movie-rs.git
