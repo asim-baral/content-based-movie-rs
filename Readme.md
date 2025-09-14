@@ -1,9 +1,9 @@
 # Content-Based Movie Recommender System
 
 This project uses a content-based recommendation system built from TMDB datasets. It recommends similar movies based on Cast, Directors, Keywords, Genres, Release Decade and Overview, they are vectorized using 3 methods:
-1- Count Vectorizer
-2- TF-IDF
-3- Sentence Transformer
+1. Count Vectorizer
+2. TF-IDF
+3. Sentence Transformer
 
 ![alt text](image-1.png)
 
